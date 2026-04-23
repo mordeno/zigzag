@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: weatherservice
+
+weather:
+  providers:
+    primary:
+      name: weatherstack
+      base-url: http://api.weatherstack.com
+      access-key: YOUR_WEATHERSTACK_API_KEY
+      timeout:
+        connect: 10s
+        read: 10s
+    failover:
+      name: openweathermap
+      base-url: http://api.openweathermap.org/data/2.5
+      access-key: YOUR_OPENWEATHERMAP_API_KEY
+      timeout:
+        connect: 10s
+        read: 10s
